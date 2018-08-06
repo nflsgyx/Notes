@@ -1,0 +1,58 @@
+.s-pdftitle{
+  text-align: center;
+  font-size: 30px;
+}
+
+.row{
+  text-align: center;
+  height: 60px;
+}
+.row div{
+  display: inline-block;
+}
+
+.row div button,
+.row div input{
+  width: 30px;
+  height: 30px;
+}
+
+.row div button{
+  background-color: #393E46;
+  color: #EEEEEE;
+}
+
+.row div button:hover{
+  color: #FD7013;
+}
+
+.row .s-turnpage{
+  float: right;
+}
+
+.row .s-pagesize{
+  float: left;
+}
+
+.parent{
+  padding-top: 20px;
+  display: block;
+  overflow-y:auto;
+  overflow-x: auto;
+  position: relative;
+  width:100%;
+}
+
+.pdfviewer {
+  display: block;
+}
+
+.overlay {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(55, 55, 255, 0.3);
+}

@@ -1,0 +1,48 @@
+.s-leftCourseCode {
+	margin-top: 30px;
+  height: auto;
+}
+
+.s-leftCourseCode ul {
+	padding:0;
+	list-style-type: none;
+  border: 5px solid #393E46;
+  border-radius: 5px;
+  background-color: #393E46;
+}
+
+.s-leftCourseCode ul li {
+  height: 80px;
+  line-height: 80px;
+  font-size: 25px;
+  font-weight: bold;
+  border-bottom: 2px solid #EEEEEE;
+  text-align: center;
+}
+
+.s-leftCourseCode ul li a:link,
+.s-leftCourseCode ul li a:visited{
+  color: #EEEEEE;
+}
+
+
+.s-leftCourseCode ul li a:hover {
+	font-size: 35px;
+	font-weight: bold;
+	text-decoration: none;
+	cursor: pointer;
+  color: #FD7013;
+}
+
+
+.s-pdfArea{
+  border: 5px solid #393E46;
+  border-radius: 5px;
+  background-color: #393E46;
+  margin-top: 30px;
+  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: auto;
+  z-index: 99;
+}
+

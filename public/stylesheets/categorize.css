@@ -1,0 +1,84 @@
+.main{
+	font-family: sans-serif;
+}
+.header{
+	width: 100%;
+	height: 100px;
+	border-bottom: 3px solid gray;
+}
+.header .logo img{
+	width:300px;
+	height: 85px;
+	margin-top: 8px;
+	margin-left: 5%;
+	float: left;
+}
+.header .menu{
+	height: 100px;
+	margin-right: 5%;
+	float: right;
+}
+.header .menu ul{
+	list-style-type: none;
+}
+.header .menu li{
+	float: left;
+	width: 100px;
+	padding: 0 10px;
+	color: black;
+	font-size: 24px;
+	line-height: 100px;
+	text-align: center;
+}
+.header .menu li:hover{
+	/*color: white; 颜色不起作用？？？*/
+	font-weight: bold;
+	background-color: gray;
+}
+
+.main{
+  margin: 0 auto;
+  width: 90%;
+  height: 660px;
+  top: 103px;
+}
+
+.main .courseCode {
+	margin-top: 30px;
+  float: left;
+  width: 20%;
+  height: auto;
+}
+
+.main .courseCode ul {
+  list-style-type: none;
+  border: 5px solid gray;
+  border-bottom: none;
+}
+
+.main .courseCode ul li {
+  height: 80px;
+  line-height: 80px;
+  font-size: 25px;
+  border-bottom: 5px solid gray;
+  text-align: center;
+}
+
+
+.main .courseCode ul :hover {
+	font-size: 35px;
+	font-weight: bold;
+  background-color: gray;
+}
+
+.pdfDoc{
+	background-color: rgba(213, 179, 57, 0.45);
+  float: right;
+  width: 75%;
+  height: 590px;
+  border: 5px solid gray;
+  margin-top: 30px;
+
+ /* overflow: scroll;
+  zoom:1;*/
+}

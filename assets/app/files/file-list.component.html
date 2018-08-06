@@ -1,0 +1,32 @@
+<div class="s-leftCourseCode col-md-2 col-md-offset-1">
+  <ul>
+        <li><a (click)="onChangeDep('ALL')" style="color:#EEEEEE" onMouseOver="this.style.color='#FD7013'"
+onMouseOut="this.style.color='#EEEEEE';" >View All</a></li>
+        <li><a (click)="onChangeDep('CSE')" style="color:#EEEEEE" onMouseOver="this.style.color='#FD7013'"
+   onMouseOut="this.style.color='#EEEEEE';" >CSE</a></li>
+        <li><a (click)="onChangeDep('MTH')" style="color:#EEEEEE" onMouseOver="this.style.color='#FD7013'"
+   onMouseOut="this.style.color='#EEEEEE';">MTH</a></li>
+        <li><a (click)="onChangeDep('EEE')" style="color:#EEEEEE" onMouseOver="this.style.color='#FD7013'"
+   onMouseOut="this.style.color='#EEEEEE';">EEE</a></li>
+        <li><a (click)="onChangeDep('ACF')" style="color:#EEEEEE" onMouseOver="this.style.color='#FD7013'"
+   onMouseOut="this.style.color='#EEEEEE';">ACF</a></li>
+        <li><a (click)="onChangeDep('ECO')" style="color:#EEEEEE" onMouseOver="this.style.color='#FD7013'"
+   onMouseOut="this.style.color='#EEEEEE';">ECO</a></li>
+        <li><a (click)="onChangeDep('MAN')" style="color:#EEEEEE" onMouseOver="this.style.color='#FD7013'"
+   onMouseOut="this.style.color='#EEEEEE';">MAN</a></li>
+        <li><a (click)="onChangeDep('BIO')" style="color:#EEEEEE" onMouseOver="this.style.color='#FD7013'"
+   onMouseOut="this.style.color='#EEEEEE';">BIO</a></li>
+       <li><a (click)="onChangeDep('ARC')" style="color:#EEEEEE" onMouseOver="this.style.color='#FD7013'"
+    onMouseOut="this.style.color='#EEEEEE';">ARC</a></li>
+      <li><a (click)="onChangeDep('IND')" style="color:#EEEEEE" onMouseOver="this.style.color='#FD7013'"
+   onMouseOut="this.style.color='#EEEEEE';">IND</a></li>
+      </ul>
+</div>
+
+
+<div class="s-pdfArea col-md-8" style="height:810px;">
+<app-file [file]="file"
+          *ngFor="let file of files" class="s-pdfArea col-md-3">
+</app-file>
+
+</div>

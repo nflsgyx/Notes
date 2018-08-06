@@ -1,0 +1,22 @@
+<article class="panel panel-default s-article">
+    <div class="panel-body">
+        {{ note.content }}
+    </div>
+    <footer class="panel-footer">
+        <div class="author">
+            <span class="s-name">{{ note.username }}</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>{{ note.time}}</span>
+        </div>
+        <div class="config" *ngIf="belongsToUser()" >
+            <a (click)="onEdit()"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+            <span>&nbsp;&nbsp;</span>
+            <a (click)="onDelete()"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+
+        </div>
+        <div class="button" *ngIf="belongsToUser()">
+            <ui-switch size="small" color="#FD7013" [(ngModel)]="note.isShared" (ngModelChange)="onSharedChange()"></ui-switch>
+        </div>
+
+    </footer>
+</article>

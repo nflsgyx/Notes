@@ -1,0 +1,17 @@
+<div class="blank"></div>
+<div style="height: 15px;"></div>
+<div class="s-container" style="width: 90%; margin: 0 auto; display: flex;">
+  <div class="s-pdfviewer" style="z-index:1000" [style.width]="widthStr" [style.position]="positionStr" [style.top]="topStr">
+    <app-pdfviewer [pdfSrc]="pdfSrc" [zoomNum]="zoomNum" (changePageEvent)="refreshNotes($event)"></app-pdfviewer>
+  </div>
+  <div class="s-secondpart" style="flex:1;" [style.position]="positionStr" [style.top]="noteTopStr" [style.left]="noteLeftStr" [style.width]="noteWidthStr" [style.height]="noteHeightStr" [style.z-index]="noteZindexStr">
+    <app-header [queryFile]="queryFile" (changeShowInputEvent)="updateShowInput($event)" (changeUseMarkdownEvent)="updateUseMarkdown($event)"></app-header>
+    <div class="row">
+        <app-note-input [fileName]="fileName" [pageNum]="pageNum" *ngIf="showInput"></app-note-input>
+    </div>
+    <hr>
+    <router-outlet></router-outlet>
+  </div>
+  <app-markdown *ngIf="useMarkdown" [fileName]="queryFile" style="position: absolute; left:40%;margin:0; max-width: 60%; display:flex"></app-markdown>
+</div>
+<app-error></app-error>

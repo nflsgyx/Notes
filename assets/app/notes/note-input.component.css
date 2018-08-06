@@ -1,0 +1,13 @@
+.s-save{
+	background-color: #393E46;
+	color: #EEE;
+}
+
+.s-save:hover{
+	color: #FD7013;
+}
+
+
+.s-clear:hover{
+	color: #FD7013;
+}

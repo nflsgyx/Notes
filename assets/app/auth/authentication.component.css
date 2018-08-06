@@ -1,0 +1,17 @@
+
+.s-nav{
+	font-size: 15px;
+	margin-top: 30px;
+	font-weight: bolder;
+	border-bottom: 2px solid #393E46;
+
+}
+
+.s-nav a:link,
+.s-nav a:visited{
+	color: #393E46;;
+}
+
+.s-nav a:hover{
+	color: #FD7013;
+}

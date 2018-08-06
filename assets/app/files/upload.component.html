@@ -1,0 +1,87 @@
+    <div class="col-md-8 col-md-offset-1 s-title">
+        <h3>Upload Lecture Slides (PDF format only)</h3>
+    </div>
+    <div class="col-md-1 col-md-offset-1 s-add">
+        <form>
+            <div class="form-group">
+                <label for="multiple" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-plus s-addbtn"></span>
+                </label>
+                <input type="file" class="form-control" id="multiple" ng2FileSelect [uploader]="uploader" multiple/>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-10 col-md-offset-1 s-tbdiv">
+        <table class="table table-hover s-table">
+            <thead>
+                <tr>
+                    <th class="s-tbttname">Name</th>
+                    <th>&nbsp;Module&nbsp;</th>
+                    <th>&nbsp;&nbsp;Code&nbsp;&nbsp;</th>
+                    <th>&nbsp;&nbsp;Week&nbsp;&nbsp;</th>
+                    <th>&nbsp;&nbsp;Size&nbsp;&nbsp;</th>
+                    <th>Progress</th>
+                    <th>&nbsp;Status&nbsp;</th>
+                    <th>Actions&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="s-tr" *ngFor="let item of uploader.queue;let i = index;">
+                    <td><strong>{{ item.file.name }}</strong></td>
+                    <!-- <td><input type="text" [(ngModel)]="moduleStr[i]" (change)="moduleCode[i]=moduleStr[i].toUpperCase()+codeStr[i];item.file.name = moduleCode[i]+'-Week'+weekNum[i]+'.pdf';onChangeModuleCode(i)"></td> -->
+                    <td><select [(ngModel)]="moduleStr[i]" class="form-control"  (change)="moduleCode[i]=moduleStr[i].toUpperCase()+codeStr[i];item.file.name = moduleCode[i]+'-Week'+weekNum[i]+'.pdf';onChangeModuleCode(i)">
+                       <option value="CSE">CSE</option>
+                       <option value="MTH">MTH</option>
+                       <option value="EEE">EEE</option>
+                       <option value="ACF">ACF</option>
+                       <option value="ECO">ECO</option>
+                       <option value="MAN">MAN</option>
+                       <option value="BIO">BIO</option>
+                       <option value="ARC">ARC</option>
+                       <option value="IND">IND</option>
+                    </select></td>
+                    <td><input type="text"  class="form-control" [(ngModel)]="codeStr[i]" (change)="moduleCode[i]=moduleStr[i].toUpperCase()+codeStr[i];item.file.name = moduleCode[i]+'-Week'+weekNum[i]+'.pdf';onChangeModuleCode(i)"></td>
+                    <td><input type="text"  class="form-control" [(ngModel)]="weekNum[i]" (change)="item.file.name = moduleCode[i]+'-Week'+weekNum[i]+'.pdf';onChangeModuleCode(i)"></td>
+
+                    <td nowrap>{{ item.file.size/1024/1024 | number:'.2' }} MB</td>
+
+                    <td>
+                        <div class="progress" style="margin-bottom: 0;margin-top: 7px;">
+                            <div class="progress-bar progress-bar-warning" role="progressbar" [ngStyle]="{ 'width': item.progress + '%' }"></div>
+                        </div>
+                    </td>
+
+                    <td>
+                        <span *ngIf="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+                        <span *ngIf="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+                        <span *ngIf="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+                    </td>
+
+                    <td nowrap>
+                        <button type="button" class="btn btn-default btn-xs s-btna"
+                                (click)="onUpload(i)" [disabled]="item.isReady || item.isUploading || item.isSuccess ||moduleStr[i]==''||codeStr[i]==''||weekNum[i]==''" style="color:#EEEEEE" onMouseOver="this.style.color='#FD7013'" onMouseOut="this.style.color='#EEEEEE';">
+                            <span class="glyphicon glyphicon-upload"></span>
+                        </button>
+                        <button type="button" class="btn btn-default btn-xs s-btnb"
+                                (click)="moduleCode.splice(i,1);codeStr.splice(i,1);moduleStr.splice(i,1);isUploaded.splice(i,1);weekNum.splice(i,1);item.remove()">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="7">
+                        <button type="button" class="btn btn-default btn-s s-btna" (click)="onUploadAll();" [disabled]="!uploader.getNotUploadedItems().length||!valid" style="color:#EEEEEE" onMouseOver="this.style.color='#FD7013'" onMouseOut="this.style.color='#EEEEEE';">
+                            <span class="glyphicon glyphicon-upload"></span> Upload all
+                        </button>
+
+                        <button type="button" class="btn btn-default btn-s s-btnb" (click)="onClearAll()" [disabled]="!uploader.queue.length">
+                             <span class="glyphicon glyphicon-trash"></span> Remove all
+                        </button>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>

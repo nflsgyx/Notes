@@ -1,0 +1,41 @@
+.thumbnail{
+	margin-top: 0px;
+	padding: 0;
+	background-color: #EEEEEE;
+	display: block;
+}
+
+.thumbnail img{
+	width: 181px;
+	height: 150px;
+	margin: 0;
+}
+
+.thumbnail .caption dl dt{
+	color: #393E46;
+	font-size: 18px;
+}
+.thumbnail .caption dl dd{
+	color: #393E46;
+	font-size: 15px;
+}
+
+.thumbnail .caption .s-view{
+	text-align:center;
+}
+
+.thumbnail .caption .s-view:link,
+.thumbnail .caption .s-view:visited{
+	color: #EEEEEE;
+	background-color: #393E46;
+}
+
+.thumbnail .caption .s-view:hover{
+	color: #FD7013;
+}
+
+.thumbnail .caption .s-subscribe:link,
+.thumbnail .caption .s-subscribe:visited{
+	color: #EEEEEE;
+	background-color: #FD7013;
+}

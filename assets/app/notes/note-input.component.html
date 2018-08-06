@@ -1,0 +1,12 @@
+<div class="col-md-10 col-md-offset-2" style="margin-bottom: 30px;">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <label for="content">Annotation</label>
+        <div class="input-group">
+            <input type="text" id="content" class="form-control" [ngModel]="note?.content" name="content" placeholder="take your notes here" required style="width: 376px;">
+            <span class="input-group-btn">
+                <button class="btn btn-default s-save" type="submit">Save</button>
+                <button type="button" class="btn btn-default s-clear" (click)="onClear(f)">Clear</button>
+            </span>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,50 @@
+.s-title h3{
+	margin: 0;
+	height: 60px;
+	line-height: 60px;
+	font-size: 25px;
+	font-weight: bolder;
+}
+
+.s-add{
+	height: 60px;
+	line-height: 60px;
+	text-align: right;
+}
+
+.s-add input{
+	position:absolute;clip:rect(0 0 0 0);
+}
+
+.s-add .s-addbtn:hover{
+	color:#FD7013;
+}
+
+.s-tbdiv .s-table thead tr th{
+	height: 30px;
+	text-align: 30px;
+	font-size: 15px;
+}
+
+
+.s-tbdiv .s-table tbody tr td select{
+	padding-left: 0;
+}
+
+.s-tbdiv .s-table tbody .s-tr td{
+	height: 35px;
+	line-height: 35px;
+}
+
+.s-tbdiv .s-table .s-tbttname{
+	text-align: left;
+	width: 40%;
+}
+
+.s-tbdiv .s-table .s-btna{
+	background-color: #393E46;
+}
+
+.s-tbdiv .s-table .s-btnb:hover{
+	color: #FD7013;
+}

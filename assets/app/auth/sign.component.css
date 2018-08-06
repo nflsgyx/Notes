@@ -1,0 +1,40 @@
+.s-box{
+	padding-top: 20px;
+	border-bottom: 2px solid #393E46;
+	border-radius: 2px;
+	min-height: 480px;
+}
+
+.s-box .s-div{
+	margin-top:50px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.s-box .s-div label{
+	font-size: 15px;
+	color: #393E46;
+}
+
+.s-box .s-div .s-check{
+	padding-top: 9px;
+	text-align: right;
+}
+
+.s-box .s-div .s-buttona{
+	text-align: right;
+	margin-bottom: 20px;
+}
+
+.s-box .s-div .s-buttonb{
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.s-box .s-div .s-buttona button{
+	background-color: #393E46;
+}
+
+.s-box .s-div .s-buttonb button:hover{
+	color: #FD7013;
+}

@@ -1,0 +1,12 @@
+<div id="preview" class="col-md-5" style="max-height:600px;min-width:300px;overflow-y:auto;" > </div>
+
+<form (ngSubmit)="onSubmit(f)" #f="ngForm" class="col-md-5 col-md-offset-1">
+    <label for="content">Markdown Editor</label>
+    <div>
+        <textarea type="text" id="text-input" oninput="this.editor.update();"  class="form-control" [ngModel]="markdown?.content" name="content" placeholder="take your notes here" required style="min-height:600px;min-width:300px;height:auto;overflow-y:auto;background-color:#EEE;color:#393E46"></textarea>
+        <div class="input-group-btn">
+            <button class="btn btn-default s-save" type="submit" style="color:#EEEEEE; background-color: #393E46;" onMouseOver="this.style.color='#FD7013'" onMouseOut="this.style.color='#EEEEEE';">Save</button>
+            <button type="button" class="btn btn-default s-clear" onMouseOver="this.style.color='#FD7013'" onMouseOut="this.style.color='#393E46;'" (click)="onClear(f)">Clear</button>
+        </div>
+    </div>
+</form>

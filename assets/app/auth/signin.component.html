@@ -1,0 +1,33 @@
+<div class="col-md-8 col-md-offset-2 s-box">
+    <form class="form-horizontal" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div class="form-group s-div">
+        <label for="email" class="col-sm-3 control-label">E-Mail</label>
+        <div class="col-sm-7">
+          <input type="email" id="email" class="form-control" formControlName="email">
+        </div>
+      </div>
+      <div class="form-group s-div">
+        <label for="password" class="col-sm-3 control-label">Password</label>
+        <div class="col-sm-7">
+          <input type="password" id="password" class="form-control" formControlName="password">
+        </div>
+      </div>
+      <div class="form-group s-div">
+        <div class="col-sm-3 s-check">
+          <input type="checkbox">
+        </div>
+        <div class="col-sm-7">
+          <label class="control-label">Remember&nbsp;Username</label>
+        </div>
+      </div>
+      <div class="form-group s-div">
+        <div class="col-sm-6 s-buttona">
+          <button class="btn btn-default btn-lg" type="submit" [disabled]="!myForm.valid" style="color:#EEEEEE" onMouseOver="this.style.color='#FD7013'" onMouseOut="this.style.color='#EEEEEE';">Submit</button>
+        </div>
+        <div class="col-sm-6 s-buttonb">
+          <button class="btn btn-default btn-lg" type="submit">Clear</button>
+        </div>
+      </div>
+    </form>
+
+</div>

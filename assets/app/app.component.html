@@ -1,0 +1,24 @@
+
+<div class="header">
+        <div class="logo"><a [routerLink]="['home']"><img src="/img/logo.jpg" alt="..."></a></div>
+        <div class="menu">
+            <ul>
+                <li><a [routerLink]="['catalog']"><span>Catalog</span></a></li>
+				<li routerLinkActive="active">
+                    <a [routerLink]="['auth']" [queryParams]="{file:queryFile}">
+                        <span>Account</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+</div>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
+<div class="footer">
+	<div class="footage">
+		<p>Made&nbsp;by&nbsp;Group&nbsp;Kilo</p>
+	</div>
+</div>

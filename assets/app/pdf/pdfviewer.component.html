@@ -1,0 +1,35 @@
+<div class="row">
+  <h3 class="s-pdftitle">{{pdfSrc.substr(7)}}</h3>
+  <br>
+  <br>
+  <div class="s-pagesize">
+    <button class="btn" (click)="zoomOut()"><span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span></button>
+    <button class="btn" (click)="zoomIn()"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></button>
+  </div>
+  <div class="s-pages">
+    <span>Page: </span>
+    <input type="text" class="form-control" [(ngModel)]="pageNum" (change)="onChangePageNum()" style="display:inline;">
+    <span> / {{totalPage}}</span>
+  </div>
+  <div class="s-turnpage">
+    <button class="btn" (click)="previousPage()"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button>
+    <button class="btn" (click)="nextPage()"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+  </div>
+</div>
+
+<div class="parent">
+  <pdf-viewer [src]="pdfSrc"
+              [render-text]="true"
+              [page]="pageNum"
+              [show-all]="false"
+              [zoom] = "zoomNum"
+              [fit-to-page]="true"
+              [autoresize]="true"
+              (after-load-complete)="callBackFn($event)"
+              (page-rendered)="pageRendered($event)"
+              class="pdfviewer"
+              id = "pdfviewer"
+              [style.top]="top"
+              data-ratio="1:1"
+  ></pdf-viewer>
+</div>

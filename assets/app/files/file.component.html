@@ -1,0 +1,14 @@
+<div class="thumbnail">
+    <img src="/files/{{file.moduleCode}}-Week{{file.weekNum}}.pdf.png" onerror='this.src="/img/pdfviewer.png"' >
+    <div class="caption">
+        <dl>
+            <dt>{{file.moduleCode}}-Week{{file.weekNum}}</dt>
+            <dd>{{file.intro}}</dd>
+        </dl>
+        <br>
+        <p>
+            <a [routerLink]="['notetaking']" [queryParams]="{file:file.moduleCode+'-Week'+file.weekNum+'.pdf'}" class="btn s-view" role="button">View</a>
+            <a href="#" class="btn s-subscribe" role="button">Subscribe</a>
+        </p>
+    </div>
+</div>

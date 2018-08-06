@@ -1,0 +1,14 @@
+<div class="blank"> </div>
+<header class="row spacing">
+    <nav class="col-md-8 col-md-offset-2">
+        <ul class="nav nav-tabs nav-justified s-nav">
+            <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signin']"><span>Sign&nbsp;In</span></a></li>
+            <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signup']"><span>Sign&nbsp;Up</span></a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="row spacing">
+    <router-outlet *ngIf="!isLoggedIn()"></router-outlet>
+    <app-logout *ngIf="isLoggedIn()"></app-logout>
+</div>

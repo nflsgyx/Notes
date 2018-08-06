@@ -1,0 +1,18 @@
+header .s-nav{
+	border-bottom: 1px solid #393E46;
+
+}
+
+header .s-nav li .s-a{
+	height: 45px;
+	font-size: 15px;
+}
+
+header .s-nav li .s-a:link,
+header .s-nav li .s-a:visited{
+	color: #393E46;;
+}
+
+header .s-nav li .s-a:hover{
+	color: #FD7013;
+}
